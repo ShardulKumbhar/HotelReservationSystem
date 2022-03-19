@@ -10,14 +10,14 @@ public class HotelDetails {
 	/*
 	 * 1. created variables
 	 */
-	
+
 	private String name;
 	private int price;
-	
+
 	/*
-	 *2.created constructor
+	 * 2.created constructor
 	 */
-	
+
 	public HotelDetails(String name, int price) {
 		super();
 		this.name = name;
@@ -29,6 +29,7 @@ public class HotelDetails {
 	 */
 	public String getName() {
 		return name;
+	
 	}
 
 	public void setName(String name) {
@@ -42,5 +43,12 @@ public class HotelDetails {
 	public void setPrice(int price) {
 		this.price = price;
 	}
+
+	@Override
+	public String toString() {
+		return "\nHotelDetails [name=" + name + ", price=" + price + "]";
+	}
 	
+	
+
 }
