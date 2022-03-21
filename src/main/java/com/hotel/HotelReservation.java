@@ -1,36 +1,5 @@
 package com.hotel;
 
-import java.lang.reflect.Array;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
-
-/**
- * ----------------------------------------------------
- * PROCEDURE:
- * ----------------------------------------------------
- /** 
- * UC1:- Ability to add Hotel in a Hotel Reservation System with Name and
- * rates for Regular Customer...
- * UC2:- Ability to find the cheapest Hotel for a given Date Range
- * UC3:- Ability to add weekday and weekend rates for each Hotel
- */
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.Scanner;
-
 /**
  * ----------------------------------------------------
  * PROCEDURE:
