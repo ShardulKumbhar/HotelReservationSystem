@@ -12,17 +12,24 @@ public class HotelDetails {
 
 	/**
 	 * creating a parameterized constructor of Hotel by passing parameters with no
+	 * return type
 	 * 
+	 * @param hotelName         passing hotelName
+	 * @param weekDayRateRegCus -regular customer
+	 * @param weekEndRateRegCus -weekend customer
 	 */
-	public HotelDetails(String hotelName, int weekDayRateRegCus) {
+	public HotelDetails(String hotelName, int weekDayRateRegCus, int weekEndRateRegCus) {
 		super();
 		this.hotelName = hotelName;
 		this.weekDayRateRegCus = weekDayRateRegCus;
+		this.weekEndRateRegCus = weekEndRateRegCus;
 	}
 
 	/**
-	 * getter setter
-	 * @return
+	 * getter setter methods created method getHotelName() The get method returns
+	 * the value of the variable hotelName.
+	 * 
+	 * @return -return to method created
 	 */
 	public String getHotelName() {
 		return hotelName;
