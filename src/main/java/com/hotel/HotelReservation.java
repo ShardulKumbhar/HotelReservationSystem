@@ -59,25 +59,14 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
 public class HotelReservation {
-	/**
-	 * ----------------------------------------------------
-	 * PROCEDURE:
-	 * ----------------------------------------------------
-	 /** 
-	 * UC1:- Ability to add Hotel in a Hotel Reservation System with Name and
-	 * rates for Regular Customer...
-	 * UC2:- Ability to find the cheapest Hotel for a given Date Range
-	 * UC3:- Ability to add weekday and weekend rates for each Hotel
-	 * UC4:- Ability to find the cheapest Hotel for a given Date Range based on weekday
-	   and weekend
-	 */
-	
+
 	/**
 	 * creating ArrayList of type Hotel to store all the Hotels getting Hotel into
 	 * object and adding into the array list for testing purpose
 	 */
-	ArrayList<HotelDetalis> listOfHotels = new ArrayList<HotelDetalis>();
+	ArrayList<HotelDetails> listOfHotels = new ArrayList<HotelDetails>();
 	Date startDate;
 	Date endDate;
 
@@ -86,7 +75,7 @@ public class HotelReservation {
 	 * 
 	 * @param obj -passing object
 	 */
-	public void addHotel(HotelDetalis obj) {
+	public void addHotel(HotelDetails obj) {
 		listOfHotels.add(obj);
 	}
 
@@ -119,8 +108,8 @@ public class HotelReservation {
 	 * 
 	 * @return -return to method created
 	 */
-	public HotelDetalis findCheapestHotel() {
-		HotelDetalis cheapestHotel = listOfHotels.stream().min(Comparator.comparing(HotelDetalis::getWeekDayRateRegCus)).orElse(null);
+	public HotelDetails findCheapestHotel() {
+		HotelDetails cheapestHotel = listOfHotels.stream().min(Comparator.comparing(HotelDetails::getWeekDayRateRegCus)).orElse(null);
 		return cheapestHotel;
 	}
 

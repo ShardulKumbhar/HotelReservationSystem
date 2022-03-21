@@ -1,12 +1,13 @@
 package com.hotel;
 
-public class HotelDetalis {
+public class HotelDetails {
 	/**
 	 * private variables can only be accessed within the same class (an outside
 	 * class has no access to it) private = restricted access However, it is
 	 * possible to access them if we provide public get and set methods.
 	 */
 	private String hotelName;
+	private int rating;
 	private int weekEndRateRegCus;
 	private int weekDayRateRegCus;
 
@@ -18,13 +19,13 @@ public class HotelDetalis {
 	 * @param weekDayRateRegCus -regular customer
 	 * @param weekEndRateRegCus -weekend customer
 	 */
-	public HotelDetalis(String hotelName, int weekDayRateRegCus, int weekEndRateRegCus) {
+	public HotelDetails(String hotelName, int rating, int weekDayRateRegCus, int weekEndRateRegCus) {
 		super();
 		this.hotelName = hotelName;
+		this.rating = rating;
 		this.weekDayRateRegCus = weekDayRateRegCus;
 		this.weekEndRateRegCus = weekEndRateRegCus;
 	}
-
 	/**
 	 * getter setter methods created method getHotelName() The get method returns
 	 * the value of the variable hotelName.
@@ -37,6 +38,14 @@ public class HotelDetalis {
 
 	public void setHotelName(String hotelName) {
 		this.hotelName = hotelName;
+	}
+
+	public int getRating() {
+		return rating;
+	}
+
+	public void setRating(int rating) {
+		this.rating = rating;
 	}
 
 	public int getWeekEndRateRegCus() {
@@ -54,5 +63,4 @@ public class HotelDetalis {
 	public void setWeekDayRateRegCus(int weekDayRateRegCus) {
 		this.weekDayRateRegCus = weekDayRateRegCus;
 	}
-
 }

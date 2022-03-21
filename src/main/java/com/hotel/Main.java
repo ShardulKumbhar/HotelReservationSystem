@@ -2,7 +2,19 @@ package com.hotel;
 
 import java.util.List;
 import java.util.Scanner;
-
+/**
+ * ----------------------------------------------------
+ * PROCEDURE:
+ * ----------------------------------------------------
+ /** 
+ * UC1:- Ability to add Hotel in a Hotel Reservation System with Name and
+ * rates for Regular Customer...
+ * UC2:- Ability to find the cheapest Hotel for a given Date Range
+ * UC3:- Ability to add weekday and weekend rates for each Hotel
+ * UC4:- Ability to find the cheapest Hotel for a given Date Range based on weekday
+   and weekend
+ * UC5:- Ability to add ratings to each Hotel - Lakewood is 3, Bridgewood is 4 and Ridgewood is 5
+ */
 public class Main {
 
 	/**
@@ -17,9 +29,9 @@ public class Main {
 		/**
 		 * Ability to adding weekday and weekend rates for each Hotel
 		 */
-		HotelDetalis hotel1 = new HotelDetalis("Lakewood", 110, 90);
-		HotelDetalis hotel2 = new HotelDetalis("Bridgewood", 160, 60);
-		HotelDetalis hotel3 = new HotelDetalis("Ridgewood", 220, 150);
+		HotelDetails hotel1 = new HotelDetails("Lakewood", 3, 110, 90);
+		HotelDetails hotel2 = new HotelDetails("Bridgewood", 4, 160, 60);
+		HotelDetails hotel3 = new HotelDetails("Ridgewood", 5, 220, 150);
 
 		/**
 		 * creating instance of HotelReservation class and adding the hotels
@@ -33,9 +45,9 @@ public class Main {
 		 * Ability to find the cheapest Hotel for a given Date Range based on weekday
 		 * and weekend - I/P – 11Sep2020, 12Sep2020
 		 */
-		System.out.println("Enter the check in date in proper format(ddMMMyyyy) ex:21Sep2000");
+		System.out.println("Enter the check in date in proper format(ddMMMyyyy)");
 		String startDate = sc.nextLine();
-		System.out.println("Enter the check out date in proper format(ddMMMyyyy) ex: 21Sep2000");
+		System.out.println("Enter the check out date in proper format(ddMMMyyyy)");
 		String endDate = sc.nextLine();
 		long totalDays = hotelReservation.getTotalNoOfDays(startDate, endDate);
 
@@ -52,7 +64,7 @@ public class Main {
 		 */
 		for (String name : cheapHotelList) {
 			System.out.println("Cheapest Hotel for your stay: " + name);
-		}
 
+		}
 	}
 }
