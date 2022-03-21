@@ -1,6 +1,6 @@
 package com.hotel;
 
-public class HotelDetails {
+public class HotelDetalis {
 	/**
 	 * private variables can only be accessed within the same class (an outside
 	 * class has no access to it) private = restricted access However, it is
@@ -18,7 +18,7 @@ public class HotelDetails {
 	 * @param weekDayRateRegCus -regular customer
 	 * @param weekEndRateRegCus -weekend customer
 	 */
-	public HotelDetails(String hotelName, int weekDayRateRegCus, int weekEndRateRegCus) {
+	public HotelDetalis(String hotelName, int weekDayRateRegCus, int weekEndRateRegCus) {
 		super();
 		this.hotelName = hotelName;
 		this.weekDayRateRegCus = weekDayRateRegCus;
