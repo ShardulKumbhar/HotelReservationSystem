@@ -27,10 +27,10 @@ public class Main {
 		System.out.println("Welcome to Hotel Reservation System!");
 
 		/**
-		 * Ability to adding weekday and weekend rates for each Hotel
+		 * Ability to adding weekday and weekend rates with ratings for each Hotel
 		 */
 		HotelDetails hotel1 = new HotelDetails("Lakewood", 3, 110, 90);
-		HotelDetails hotel2 = new HotelDetails("Bridgewood", 4, 160, 60);
+		HotelDetails hotel2 = new HotelDetails("Bridgewood", 4, 150, 50);
 		HotelDetails hotel3 = new HotelDetails("Ridgewood", 5, 220, 150);
 
 		/**
@@ -42,21 +42,18 @@ public class Main {
 		hotelReservation.addHotel(hotel3);
 
 		/**
-		 * Ability to find the cheapest Hotel for a given Date Range based on weekday
-		 * and weekend - I/P – 11Sep2020, 12Sep2020
+		 * Ability to find the Best Rated Hotel for a given Date Range
+		 * 
 		 */
 		System.out.println("Enter the check in date in proper format(ddMMMyyyy)");
 		String startDate = sc.nextLine();
 		System.out.println("Enter the check out date in proper format(ddMMMyyyy)");
 		String endDate = sc.nextLine();
 		long totalDays = hotelReservation.getTotalNoOfDays(startDate, endDate);
-
-		/**
-		 * creating list of cheapHotelList here finding of cheapest hotel based on
-		 * weekday and weekend rates
-		 */
 		List<String> cheapHotelList = hotelReservation.findCheapestHotelBasedOnWeekEndAndWeekDaysOffer(startDate,
 				endDate);
+		String cheapestHotelWithBestRating = hotelReservation
+				.findCheapestHotelBasedOnWeekEndAndWeekDaysOfferAndBestRating(startDate, endDate);
 
 		/**
 		 * ForEach() method is used and it is a Terminal operations mark the stream as
@@ -64,7 +61,11 @@ public class Main {
 		 */
 		for (String name : cheapHotelList) {
 			System.out.println("Cheapest Hotel for your stay: " + name);
-
 		}
+		System.out.println(cheapestHotelWithBestRating);
+
+		String bestRatedHotel = hotelReservation.findBestRatedHotel(startDate, endDate);
+		System.out.println("Best Rated Hotel:Price = " + bestRatedHotel);
+
 	}
 }
