@@ -1,54 +1,51 @@
 package com.hotel;
 
 public class HotelDetails {
-	
 	/**
-	 * 1. created variables
-	 * 2.created constructor
-	 *  3. created getter and setters
+	 * private variables can only be accessed within the same class (an outside
+	 * class has no access to it) private = restricted access However, it is
+	 * possible to access them if we provide public get and set methods.
 	 */
-	/*
-	 * 1. created variables
+	private String hotelName;
+	private int weekEndRateRegCus;
+	private int weekDayRateRegCus;
+
+	/**
+	 * creating a parameterized constructor of Hotel by passing parameters with no
+	 * 
 	 */
-
-	private String name;
-	private int price;
-
-	/*
-	 * 2.created constructor
-	 */
-
-	public HotelDetails(String name, int price) {
+	public HotelDetails(String hotelName, int weekDayRateRegCus) {
 		super();
-		this.name = name;
-		this.price = price;
+		this.hotelName = hotelName;
+		this.weekDayRateRegCus = weekDayRateRegCus;
 	}
 
-	/*
-	 * 3. created getter and setters
+	/**
+	 * getter setter
+	 * @return
 	 */
-	public String getName() {
-		return name;
-	
+	public String getHotelName() {
+		return hotelName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setHotelName(String hotelName) {
+		this.hotelName = hotelName;
 	}
 
-	public int getPrice() {
-		return price;
+	public int getWeekEndRateRegCus() {
+		return weekEndRateRegCus;
 	}
 
-	public void setPrice(int price) {
-		this.price = price;
+	public void setWeekEndRateRegCus(int weekEndRateRegCus) {
+		this.weekEndRateRegCus = weekEndRateRegCus;
 	}
 
-	@Override
-	public String toString() {
-		return "\nHotelDetails [name=" + name + ", price=" + price + "]";
+	public int getWeekDayRateRegCus() {
+		return weekDayRateRegCus;
 	}
-	
-	
+
+	public void setWeekDayRateRegCus(int weekDayRateRegCus) {
+		this.weekDayRateRegCus = weekDayRateRegCus;
+	}
 
 }
