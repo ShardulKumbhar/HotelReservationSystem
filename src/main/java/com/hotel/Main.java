@@ -3,7 +3,6 @@ package com.hotel;
 import java.util.List;
 import java.util.Scanner;
 
-
 /**
  * ----------------------------------------------------
  * PROCEDURE:
@@ -21,11 +20,15 @@ import java.util.Scanner;
  * UC9:- Ability to add special rates for reward customers as a part of Loyalty Program
  * UC10:- Ability to find the cheapest best rated hotel Hotel for a given Date Range for a
    Reward Customer
-   UC11:- Ability to find the cheapest best rated hotel Hotel for a given DateRange for a 
+ * UC11:- Ability to find the cheapest best rated hotel Hotel for a given DateRange for a 
    Reward Customer using Java Streams
-  
+   UC12:- Ability to find the cheapest best rated hotel Hotel for a given Date Range for a 
+   Regular Customer
+ * using Java Streams - Use Regex Validation, Exceptions and Java 8 Date Feature
+ * I/p: 11sep2020, 12sep2020
+ * O/p: BridgeWood, Rating:4 and Total Rates: $200
  */
-public class Main {
+public class Main{
 
 	/**
 	 * Main method for manipulation of Arraylist of Hotel
@@ -95,11 +98,12 @@ public class Main {
 				System.out.println(e.getMessage());
 			}
 		}
-		long totalDays = hotelReservation.getTotalNoOfDays();
-		String cheapestHotelBestRated = hotelReservation
-				.findCheapestHotelBasedOnWeekEndAndWeekDaysOfferAndBestRatingForRewardCustomer();
-		System.out.println("Hotel:Rating:Price = " + cheapestHotelBestRated);
+		/**
+		 * Ability to find the cheapest best rated hotel Hotel for a given Date Range
+		 * for a Regular Customer
+		 */
+		String cheapestHotelBestRated = hotelReservation.findCheapestHotelBasedOnWeekEndAndWeekDaysOfferAndBestRating();
+		System.out.println("Hotel:Rating:Price:Customer= " + cheapestHotelBestRated + ":" + customer.getCustomerType());
 
 	}
 }
-
